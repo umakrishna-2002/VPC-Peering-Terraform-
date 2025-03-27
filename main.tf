@@ -264,7 +264,7 @@ resource "aws_instance" "example-instance1" {
     instance_type = "t2.micro"
     subnet_id     = aws_subnet.example-sn1.id
     vpc_security_group_ids = [aws_security_group.vpc1_sg.id]
-    key_name = "k8s"
+    key_name = "key-pair-name"
 
     tags = {
         Name = "public-instance-1"
@@ -277,7 +277,7 @@ resource "aws_instance" "example-instance2" {
     instance_type = "t2.micro"
     subnet_id     = aws_subnet.example-sn2.id
     vpc_security_group_ids = [aws_security_group.vpc2_sg.id]
-    key_name = "k8s"
+    key_name = "key-pair-name"
 
     tags = {
         Name = "public-instance-2"
@@ -289,7 +289,7 @@ resource "aws_instance" "example-instance3" {
     instance_type = "t2.micro"
     subnet_id     = aws_subnet.private-sn2.id
     vpc_security_group_ids = [aws_security_group.vpc2_sg.id]
-    key_name = "k8s"
+    key_name = "key-pair-name"
 
     tags = {
         Name = "private-instance-1"
@@ -301,7 +301,7 @@ resource "aws_instance" "example-instance4" {
     instance_type = "t2.micro"
     subnet_id     = aws_subnet.private-sn2.id
     vpc_security_group_ids = [aws_security_group.vpc2_sg.id]
-    key_name = "k8s"
+    key_name = "key-pair-name"
 
     tags = {
         Name = "private-instance-2"
